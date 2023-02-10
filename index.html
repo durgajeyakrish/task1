@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-eqiv="X-UA-compatible" content="IE=Rdge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>string_method</title>
+</head>
+<body>
+<script>
+	 <!-- let a = prompt('enter a sentence') -->
+	 <!-- let b = prompt("enter a string"); -->
+	 <!-- let val=(str.replace( b, '')); -->
+	 <!-- document.write(val); -->
+	 
+	 
+	 <!-- sort a number without using methods -->
+					let values=[12, 10, 15, -11, -14, 13, 16];
+					function order(sort){
+					var result=[];
+
+
+					for(i=0; i<sort.length; i++){
+
+					for(j=0; j<sort.length; j++){
+							if(sort[i]>sort[j+1]){
+
+							}
+						}
+
+					 }
+
+					 console.log( result );
+					}
+					
+					
+					
+					
+					
+			function shuffle(arra1) {
+			var ctr = arra1.length, temp, index;
+
+
+		// While there are elements in the array
+			while (ctr > 0) {
+		// Pick a random index
+				index = Math.floor(Math.random() * ctr);
+		// Decrease ctr by 1
+				ctr--;
+		// And swap the last element with it
+				temp = arra1[ctr];
+				arra1[ctr] = arra1[index];
+				arra1[index] = temp;
+			}
+			return arra1;
+		}
+		var myArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+		console.log(shuffle(myArray));
+		
+		
+		
+		let arr = [1,2,3,5,4,3,4,5]
+		function removeDuplicate(arr){
+			let result = [];
+			for (let i=0; i< arr.length; i++){
+				if(result.length === 0){
+					result.push(arr[i]);
+				}
+				if(result.indexOf(arr[i]) === -1){
+					result.push(arr[i]);
+				}
+			}
+			return result;
+		}
+		console.log(removeDuplicate(arr));
+		
+		
+		
+		let name = prompt("Enter the name");
+			let letter = prompt("count of letter");
+     
+      function nam(string, cheak) {
+        let count = 0;
+        for (let i = 0; i < string.length; i++) {
+          if (string[i] === cheak) {
+            count++;
+          }
+        }
+        return count;
+      }
+	  
+	   console.log(nam(name,letter));
+			 
+	 
+	 
+</script>
+</body>
