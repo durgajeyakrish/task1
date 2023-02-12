@@ -105,7 +105,24 @@
             document.body.style.background = bgColor;
         }
    
-			 
+			 let a=prompt("Enter a Name");
+		let b=prompt("Enter a CheckLeter");
+		let c=0;
+		let result=fun(a,b);
+		function fun(x,y){
+			for (i=0; i< x.length; i++){
+				
+				if (x[i]== y){
+					c++;
+				}
+			}
+			if(c){
+				document.write("This Word "+ c + " Match");
+			}
+			else{
+				document.write("This Word  Not Match");
+			}
+		}
 	 
 	 
 </script>
