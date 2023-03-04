@@ -152,9 +152,9 @@
 		console.log(removeDuplicate(arr));
 		 
 		
-first = ['a', 'f', 'g', 'h', 'l', 'k'];
-	letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w','x', 'y', 'z'];
-	empty= [];
+    let first = ['a', 'f', 'g', 'h', 'l', 'k'];
+	let letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w','x', 'y', 'z'];
+	let empty= [];
 	k = 0;
 	for(i = 0; i < first.length; i++){
 	   for(j=0; j < letters.length; j++){
@@ -165,7 +165,31 @@ first = ['a', 'f', 'g', 'h', 'l', 'k'];
 		  }
 	   }
 	}
-    console.log(empty);
+    console.log(empty);      
+	
+	let name = prompt("Enter the name");
+			let letter = prompt("count of letter");
+     
+      function nam(string, cheak) {
+        let count = 0;
+        for (let i = 0; i < string.length; i++) {
+          if (string[i] === cheak) {
+            count++;
+          }
+        }
+        return count;
+      }
+	     
+	  console.log(nam(name,letter));
+	
+	
+	 
+	 
+	 
+	 
+	 
+	 
+	 
 	 
 </script>
 </body>
