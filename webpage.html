@@ -1,34 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>practice</title>
-	<link rel="stylesheet"  href="webpage.css">
-</head>
-<body>
-	<div class="continer">
-		<div class="first">
-			<div class="second">
-				
-			</div>
-			<div class="login">
-			
-				<h3>ACCOUNT LOGIN</h3>
-				<div>
-				<input type="text" id="user" placeholder="username"></input>
-				<input type="text" id="pass" placeholder="password"></input>
-				</div>
-				<div>
-					<button id="btn">sign in</button>
-				</div>
-			</div>
-		</div>
-	</div>
-</body>
-<script>
-		let 
-</script>
+<html>
+  <head>
+    <title>Create Checkboxes Dynamically</title>
+    <script>
+      function createCheckboxes() {
+        var numCheckboxes = document.getElementById("numCheckboxes").value;
+
+        if (isNaN(numCheckboxes)) {
+          alert("Please enter a valid number.");
+          return false;
+        } else {
+          var checkboxesContainer = document.getElementById("checkboxesContainer");
+          checkboxesContainer.innerHTML = "";
+
+          for (var i = 1; i <= numCheckboxes; i++) {
+            var checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            checkbox.id = "checkbox" + i;
+            checkbox.name = "checkbox" + i;
+
+            var label = document.createElement("label");
+            label.htmlFor = "checkbox" + i;
+            label.appendChild(document.createTextNode("Checkbox " + i));
+
+            checkboxesContainer.appendChild(checkbox);
+            checkboxesContainer.appendChild(label);
+            checkboxesContainer.appendChild(document.createElement("br"));
+          }
+
+          return true;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Create Checkboxes Dynamically</h1>
+    <label for="numCheckboxes">Enter the number of checkboxes to create:</label>
+    <input type="text" id="numCheckboxes" name="numCheckboxes" /><br />
+
+    <button onclick="createCheckboxes()">Create Checkboxes</button><br />
+
+    <div id="checkboxesContainer"></div>
+  </body>
 </html>
- name:j.durga

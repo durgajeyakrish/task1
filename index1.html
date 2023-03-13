@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-eqiv="X-UA-compatible" content="IE=Rdge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>todo</title>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
+	<style>
+       .main{
+	      display:flex;
+		  border:1px solid black;
+		  padding:2rem;
+	   }
+	</style>
+</head>
+<body>
+   
+   <section class='main'>
+      <div>
+	     <h2>To_Do_List</h2>
+		 <textarea id='txt' rows='8' cols='25' placeholder='Enter here...'></textarea>
+		 <button id='btn'>Add</button>
+	  </div>
+      <div>
+	     <h2 id='div'>Your List</h2>
+		 <ul id='ul'></ul>
+	  </div>
+   </section>
+
+   <script>
+	 
+      var btn = document.getElementById('btn');
+	  btn.addEventListener('click', myFun);
+	  var ul = document.getElementById('ul')
+	  
+	  function myFun(){
+	     var txt = document.getElementById('txt');
+		 if(txt.value.trim() === ''){
+		    alert('Enter value'); 
+		 }
+		 else{
+			var li = document.createElement('li');
+			li.innerText = txt.value;
+			ul.appendChild(li);
+			txt.value='';
+		 }
+		 
+		 // add edit icon
+		let icon1= document.createElement("i");
+        icon1.setAttribute("class","fa-solid fa-pen-to-square");
+        li.appendChild(icon1);
+		 
+		 
+		 // add delete icon
+		 var icon2 = document.createElement('i');
+		 icon2.setAttribute('class', 'fa-solid fa-trash');
+		 li.appendChild(icon2);
+	  
+	    
+	     // delete function
+	     icon2.addEventListener("click",()=>{
+	     li.remove();
+	     })
+		 }
+	
+   </script>
+   
+</body>
+</html>
